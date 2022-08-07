@@ -1,7 +1,8 @@
 import { Nav, Navbar, Container, Button } from 'react-bootstrap';
 import { Outlet, Link } from "react-router-dom";
-import { FaShoppingCart, FaUser, FaUserGraduate } from "react-icons/fa";
+import { FaUser, FaUserGraduate } from "react-icons/fa";
 import logo from '../assets/img/logo.png';
+import Cartwidget from './Cartwidget/Cartwidget';
 
 const NavbarHO = () => {
     return (
@@ -32,9 +33,7 @@ const NavbarHO = () => {
                         <Button variant='dark' className="mx-1">
                             <FaUser /> {' '} Login
                         </Button>
-                        <Button variant="outline-secondary">
-                            <FaShoppingCart />
-                        </Button>
+                        <Cartwidget />
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
