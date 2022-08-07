@@ -1,12 +1,12 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
-import About from './components/About';
-import Contact from './components/Contact';
-import Hombre from './components/Hombre';
-import Home from './components/Home';
-import Mujer from './components/Mujer';
-import NavbarHO from './components/NavbarHO';
-import Ninos from './components/Ninos';
+import About from './components/layaout/About';
+import Contact from './components/layaout/Contact';
+import Hombre from './components/layaout/Hombre';
+import Home from './components/layaout/Home';
+import Mujer from './components/layaout/Mujer';
+import NavbarHO from './components/Navbar/NavbarHO';
+import Ninos from './components/layaout/Ninos';
 
 function App() {
   return (

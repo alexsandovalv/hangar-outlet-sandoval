@@ -1,8 +1,8 @@
 import { Nav, Navbar, Container, Button } from 'react-bootstrap';
 import { Outlet, Link } from "react-router-dom";
 import { FaUser, FaUserGraduate } from "react-icons/fa";
-import logo from '../assets/img/logo.png';
-import Cartwidget from './Cartwidget/Cartwidget';
+import logo from '../../assets/img/logo.png';
+import Cartwidget from '../Cartwidget/Cartwidget';
 
 const NavbarHO = () => {
     return (
