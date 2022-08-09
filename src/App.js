@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
+import About from './components/layaout/About';
+import Contact from './components/layaout/Contact';
+import Hombre from './components/layaout/Hombre';
+import Home from './components/layaout/Home';
+import Mujer from './components/layaout/Mujer';
+import NavbarHO from './components/Navbar/NavbarHO';
+import Ninos from './components/layaout/Ninos';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+        <BrowserRouter >
+          <NavbarHO />
+          <Routes>
+            <Route index element={ <Home /> } />
+            <Route path='hombre' element={ <Hombre /> } />
+            <Route path='mujer' element={ <Mujer /> } />
+            <Route path='nino' element={ <Ninos /> } />
+            <Route path='about' element={ <About /> } />
+            <Route path='contact' element={ <Contact /> } />
+            <Route path='*' element={ <Navigate replace to='/' /> } />
+          </Routes>
+        </BrowserRouter>
+    </>
+      
+    
   );
 }
 
