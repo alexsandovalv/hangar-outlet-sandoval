@@ -3,7 +3,7 @@ import { Outlet, Link } from "react-router-dom";
 import { FaUser, FaUserGraduate } from "react-icons/fa";
 import logo from '../../assets/img/logo.png';
 import Cartwidget from '../Cartwidget/Cartwidget';
-import menuData from '../data/menu.json'
+import menuData from '../../data/menu.json'
 
 const NavbarHO = () => {
     return (
