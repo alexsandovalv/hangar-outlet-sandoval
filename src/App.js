@@ -17,7 +17,7 @@ function App() {
             <Route index element={ <Home /> } />
             <Route path='hombre' element={ <Hombre /> } />
             <Route path='mujer' element={ <Mujer /> } />
-            <Route path='ninos' element={ <Ninos /> } />
+            <Route path='nino' element={ <Ninos /> } />
             <Route path='about' element={ <About /> } />
             <Route path='contact' element={ <Contact /> } />
             <Route path='*' element={ <Navigate replace to='/' /> } />

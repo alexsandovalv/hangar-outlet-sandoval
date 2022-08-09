@@ -3,6 +3,7 @@ import { Outlet, Link } from "react-router-dom";
 import { FaUser, FaUserGraduate } from "react-icons/fa";
 import logo from '../../assets/img/logo.png';
 import Cartwidget from '../Cartwidget/Cartwidget';
+import menuData from '../data/menu.json'
 
 const NavbarHO = () => {
     return (
@@ -21,11 +22,16 @@ const NavbarHO = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link as={Link} to='/hombre' >Hombre</Nav.Link>
+                            {/* <Nav.Link as={Link} to='/hombre' >Hombre</Nav.Link>
                             <Nav.Link as={Link} to='/mujer' href="#features">Mujeres</Nav.Link>
                             <Nav.Link as={Link} to='/ninos' href="#pricing">Niños</Nav.Link>
                             <Nav.Link as={Link} to='/about' href="#pricing">Nosotros</Nav.Link>
-                            <Nav.Link as={Link} to='/contact' href="#pricing">Contactenos</Nav.Link>
+                            <Nav.Link as={Link} to='/contact' href="#pricing">Contactenos</Nav.Link> */}
+
+                            { menuData.map( (item) => (
+                                <Nav.Link as={Link} to={item.link} href="#features" key={item.id}> {item.name} </Nav.Link>
+                            ) ) }
+
                         </Nav>
 
                         <Button variant="outline-secondary">

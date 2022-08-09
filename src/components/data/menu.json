@@ -1,0 +1,33 @@
+
+[
+    {
+        "id" : 1,
+        "name" : "Home",
+        "link": "/home"
+    },
+    {
+        "id" : 2,
+        "name" : "Hombre",
+        "link": "/hombre"
+    },
+    {
+        "id" : 3,
+        "name" : "Mujer",
+        "link": "/mujer"
+    },
+    {
+        "id" : 4,
+        "name" : "Niños",
+        "link": "/nino"
+    },
+    {
+        "id" : 5,
+        "name" : "Nosotros",
+        "link": "/about"
+    },
+    {
+        "id" : 6,
+        "name" : "Contactenos",
+        "link": "/caontact"
+    }
+]
