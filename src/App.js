@@ -7,6 +7,7 @@ import Home from './components/layaout/Home';
 import Mujer from './components/layaout/Mujer';
 import NavbarHO from './components/Navbar/NavbarHO';
 import Ninos from './components/layaout/Ninos';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
             <Route path='*' element={ <Navigate replace to='/' /> } />
           </Routes>
         </BrowserRouter>
+        
+        <ItemListContainer greeting='Hola, soy nuevo en React y quiero aprender urgente!!! ' />
     </>
       
     
