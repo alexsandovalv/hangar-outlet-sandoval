@@ -1,11 +1,18 @@
+import { useEffect, useState } from 'react';
 import { Nav, Navbar, Container, Button } from 'react-bootstrap';
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, NavLink, Link, useLocation } from "react-router-dom";
 import { FaUser, FaUserGraduate } from "react-icons/fa";
 import logo from '../../assets/img/logo.png';
 import Cartwidget from '../Cartwidget/Cartwidget';
 import menuData from '../../data/menu.json'
 
 const NavbarHO = () => {
+    const location = useLocation();
+    const [url, setUrl] = useState(null);
+    useEffect(() => {
+        setUrl(location.pathname);
+    }, [location]);
+
     return (
         <>
             <Navbar bg="light" variant="light" expand='lg'>
@@ -21,16 +28,20 @@ const NavbarHO = () => {
                         Hangar Outlet</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="me-auto">
+                        <Nav className="me-auto pt-3 mb-3">
                             {/* <Nav.Link as={Link} to='/hombre' >Hombre</Nav.Link>
                             <Nav.Link as={Link} to='/mujer' href="#features">Mujeres</Nav.Link>
                             <Nav.Link as={Link} to='/ninos' href="#pricing">Niños</Nav.Link>
                             <Nav.Link as={Link} to='/about' href="#pricing">Nosotros</Nav.Link>
                             <Nav.Link as={Link} to='/contact' href="#pricing">Contactenos</Nav.Link> */}
 
-                            { menuData.map( (item) => (
-                                <Nav.Link as={Link} to={item.link} href="#features" key={item.id}> {item.name} </Nav.Link>
-                            ) ) }
+                            {menuData.map((item, index) => (
+
+                                <Nav.Link eventKey={index} as={Link} to={item.link} > 
+                                    {item.name}
+                                </Nav.Link>
+
+                            ))}
 
                         </Nav>
 
@@ -46,7 +57,7 @@ const NavbarHO = () => {
 
             <section>
                 <Outlet />
-            </section> 
+            </section>
 
 
         </>
